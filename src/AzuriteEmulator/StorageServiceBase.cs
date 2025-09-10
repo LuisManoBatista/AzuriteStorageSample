@@ -14,7 +14,7 @@ public abstract class StorageServiceBase : IStorageService
 
     protected virtual string ServiceEndpointUrl => $"{EndpointsProtocol}://127.0.0.1:{ServiceEndpointPort}/{AccountName}";
 
-    protected virtual string ConnectionString => $"DefaultEndpointsProtocol={EndpointsProtocol};AccountName={AccountName};AccountKey={AccountKey};{ServiceEndpointType}={ServiceEndpointUrl};";
+    public virtual string ConnectionString => $"DefaultEndpointsProtocol={EndpointsProtocol};AccountName={AccountName};AccountKey={AccountKey};{ServiceEndpointType}={ServiceEndpointUrl};";
 
     public abstract Task ExecuteAsync();
 }
